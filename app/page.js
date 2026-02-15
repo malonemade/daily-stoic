@@ -208,7 +208,7 @@ export default function Home() {
             style={{
               fontSize: "clamp(1.8rem, 4vw, 2.6rem)",
               fontWeight: 400,
-              color: "#d4cabb",
+              color: "#ebe6dc",
               margin: 0,
               lineHeight: 1.2,
               fontFamily: "'Cormorant', serif",
@@ -249,8 +249,8 @@ export default function Home() {
             </div>
             <div
               style={{
-                fontSize: "clamp(1rem, 2.5vw, 1.25rem)",
-                color: "rgba(200,192,176,0.6)",
+                fontSize: "clamp(1.1rem, 2.5vw, 1.35rem)",
+                color: "rgba(235,230,220,0.65)",
                 fontStyle: "italic",
                 lineHeight: 1.7,
                 marginBottom: "3rem",
@@ -327,9 +327,9 @@ export default function Home() {
 
                 <blockquote
                   style={{
-                    fontSize: "clamp(1.05rem, 2.5vw, 1.3rem)",
+                    fontSize: "clamp(1.25rem, 3vw, 1.6rem)",
                     lineHeight: 1.85,
-                    color: "#d4cabb",
+                    color: "#ebe6dc",
                     margin: 0,
                     padding: "0 1rem",
                     fontFamily: "'EB Garamond', serif",
@@ -344,16 +344,16 @@ export default function Home() {
                     style={{
                       marginTop: "2.5rem",
                       padding: "1.25rem 1.5rem",
-                      borderLeft: "1px solid rgba(180,160,120,0.12)",
+                      borderLeft: "1px solid rgba(200,192,176,0.25)",
                       textAlign: "left",
                     }}
                   >
                     <div
                       style={{
-                        fontSize: "0.6rem",
+                        fontSize: "0.7rem",
                         letterSpacing: "0.3em",
                         textTransform: "uppercase",
-                        color: "rgba(180,160,120,0.25)",
+                        color: "rgba(200,192,176,0.4)",
                         marginBottom: "0.6rem",
                         fontFamily: "'Cormorant', serif",
                       }}
@@ -362,8 +362,8 @@ export default function Home() {
                     </div>
                     <div
                       style={{
-                        fontSize: "0.95rem",
-                        color: "rgba(200,192,176,0.65)",
+                        fontSize: "1.1rem",
+                        color: "rgba(235,230,220,0.7)",
                         lineHeight: 1.65,
                         fontFamily: "'EB Garamond', serif",
                         fontStyle: "italic",
@@ -374,17 +374,65 @@ export default function Home() {
                   </div>
                 )}
 
+                {/* Source attribution */}
                 <div
                   style={{
-                    marginTop: "2.5rem",
-                    fontSize: "0.7rem",
-                    letterSpacing: "0.2em",
-                    color: "rgba(180,160,120,0.2)",
-                    fontFamily: "'Cormorant', serif",
-                    textTransform: "uppercase",
+                    marginTop: "3rem",
+                    paddingTop: "1.5rem",
+                    borderTop: "1px solid rgba(200,192,176,0.1)",
                   }}
                 >
-                  In the spirit of {philosopher}
+                  <div
+                    style={{
+                      fontSize: "0.7rem",
+                      letterSpacing: "0.3em",
+                      textTransform: "uppercase",
+                      color: "rgba(200,192,176,0.4)",
+                      marginBottom: "0.75rem",
+                      fontFamily: "'Cormorant', serif",
+                    }}
+                  >
+                    Source
+                  </div>
+                  <div
+                    style={{
+                      fontSize: "1.15rem",
+                      color: "#ebe6dc",
+                      fontFamily: "'Cormorant', serif",
+                      fontWeight: 500,
+                      letterSpacing: "0.05em",
+                      marginBottom: "0.4rem",
+                    }}
+                  >
+                    {philosopher}
+                  </div>
+                  <div
+                    style={{
+                      fontSize: "0.95rem",
+                      color: "rgba(200,192,176,0.5)",
+                      fontFamily: "'EB Garamond', serif",
+                      fontStyle: "italic",
+                    }}
+                  >
+                    {philosopher === "Marcus Aurelius" && "Meditations"}
+                    {philosopher === "Epictetus" && "Discourses & Enchiridion"}
+                    {philosopher === "Seneca" && "Letters to Lucilius & On the Shortness of Life"}
+                    {philosopher === "Cleanthes" && "Hymn to Zeus"}
+                    {philosopher === "Chrysippus" && "On the Passions & On Providence"}
+                    {philosopher === "Musonius Rufus" && "Lectures & Fragments"}
+                    {philosopher === "Hierocles" && "Elements of Ethics"}
+                    {philosopher === "Cato" && "As recorded by Plutarch & Cicero"}
+                  </div>
+                  <div
+                    style={{
+                      fontSize: "0.8rem",
+                      color: "rgba(200,192,176,0.35)",
+                      fontFamily: "'EB Garamond', serif",
+                      marginTop: "0.75rem",
+                    }}
+                  >
+                    AI-generated reflection in the spirit of this philosopher&apos;s teachings
+                  </div>
                 </div>
               </div>
             );
@@ -412,10 +460,10 @@ export default function Home() {
             disabled={loading}
             style={{
               background: "transparent",
-              border: "1px solid rgba(180,160,120,0.15)",
-              color: "rgba(200,192,176,0.5)",
+              border: "1px solid rgba(200,192,176,0.25)",
+              color: "rgba(235,230,220,0.6)",
               padding: "0.85rem 2.5rem",
-              fontSize: "0.65rem",
+              fontSize: "0.7rem",
               letterSpacing: "0.35em",
               textTransform: "uppercase",
               cursor: loading ? "wait" : "pointer",
@@ -426,13 +474,13 @@ export default function Home() {
             }}
             onMouseEnter={(e) => {
               if (!loading) {
-                e.target.style.borderColor = "rgba(180,160,120,0.35)";
-                e.target.style.color = "rgba(200,192,176,0.8)";
+                e.target.style.borderColor = "rgba(200,192,176,0.45)";
+                e.target.style.color = "rgba(235,230,220,0.9)";
               }
             }}
             onMouseLeave={(e) => {
-              e.target.style.borderColor = "rgba(180,160,120,0.15)";
-              e.target.style.color = "rgba(200,192,176,0.5)";
+              e.target.style.borderColor = "rgba(200,192,176,0.25)";
+              e.target.style.color = "rgba(235,230,220,0.6)";
             }}
           >
             {quote ? "Generate Another" : "Receive Today's Reflection"}
