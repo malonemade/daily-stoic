@@ -172,7 +172,7 @@ export default function Home() {
           top: "2.5rem",
           letterSpacing: "1.2em",
           fontSize: "0.6rem",
-          color: "rgba(180,160,120,0.2)",
+          color: "rgba(220,210,195,0.55)",
           fontFamily: "'Cormorant', serif",
           fontWeight: 300,
         }}
@@ -195,7 +195,7 @@ export default function Home() {
               fontSize: "0.65rem",
               letterSpacing: "0.5em",
               textTransform: "uppercase",
-              color: "rgba(180,160,120,0.35)",
+              color: "rgba(220,210,195,0.7)",
               fontFamily: "'Cormorant', serif",
               fontWeight: 400,
               marginBottom: "1rem",
@@ -221,7 +221,7 @@ export default function Home() {
           <div
             style={{
               fontSize: "0.75rem",
-              color: "rgba(180,160,120,0.3)",
+              color: "rgba(220,210,195,0.6)",
               marginTop: "0.75rem",
               letterSpacing: "0.15em",
               fontFamily: "'Cormorant', serif",
@@ -240,7 +240,7 @@ export default function Home() {
                 fontSize: "0.7rem",
                 letterSpacing: "0.3em",
                 textTransform: "uppercase",
-                color: "rgba(180,160,120,0.25)",
+                color: "rgba(220,210,195,0.55)",
                 marginBottom: "2rem",
                 fontFamily: "'Cormorant', serif",
               }}
@@ -263,7 +263,7 @@ export default function Home() {
               style={{
                 fontSize: "0.65rem",
                 letterSpacing: "0.25em",
-                color: "rgba(180,160,120,0.2)",
+                color: "rgba(220,210,195,0.55)",
                 marginBottom: "1.5rem",
                 fontFamily: "'Cormorant', serif",
                 textTransform: "uppercase",
@@ -281,7 +281,7 @@ export default function Home() {
               style={{
                 width: "2px",
                 height: "40px",
-                background: "rgba(180,160,120,0.2)",
+                background: "rgba(220,210,195,0.55)",
                 margin: "0 auto 1.5rem",
                 animation: "pulse 2s ease-in-out infinite",
               }}
@@ -291,7 +291,7 @@ export default function Home() {
                 fontSize: "0.7rem",
                 letterSpacing: "0.35em",
                 textTransform: "uppercase",
-                color: "rgba(180,160,120,0.25)",
+                color: "rgba(220,210,195,0.55)",
                 fontFamily: "'Cormorant', serif",
               }}
             >
@@ -505,8 +505,8 @@ export default function Home() {
         }
         * { box-sizing: border-box; }
         body { margin: 0; }
-        button:focus { outline: 1px solid rgba(180,160,120,0.2); outline-offset: 3px; }
-        ::selection { background: rgba(180,160,120,0.2); }
+        button:focus { outline: 1px solid rgba(220,210,195,0.55); outline-offset: 3px; }
+        ::selection { background: rgba(220,210,195,0.55); }
       `}</style>
     </div>
   );
