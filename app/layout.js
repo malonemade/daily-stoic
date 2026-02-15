@@ -13,7 +13,7 @@ const cormorant = Cormorant({
 });
 
 export const metadata = {
-  title: "Daily Stoic — AI-Powered Meditations",
+  title: "Daily Stoic",
   description:
     "Receive a fresh Stoic reflection each day, generated in the voice of history's greatest philosophers.",
 };
