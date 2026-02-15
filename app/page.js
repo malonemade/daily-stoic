@@ -423,16 +423,7 @@ export default function Home() {
                     {philosopher === "Hierocles" && "Elements of Ethics"}
                     {philosopher === "Cato" && "As recorded by Plutarch & Cicero"}
                   </div>
-                  <div
-                    style={{
-                      fontSize: "0.8rem",
-                      color: "rgba(200,192,176,0.35)",
-                      fontFamily: "'EB Garamond', serif",
-                      marginTop: "0.75rem",
-                    }}
-                  >
-                    AI-generated reflection in the spirit of this philosopher&apos;s teachings
-                  </div>
+                 
                 </div>
               </div>
             );
