@@ -215,7 +215,7 @@ export default function Home() {
               letterSpacing: "0.04em",
             }}
           >
-            Daily Stoic
+            Stoic Reflections
           </h1>
 
           <div
