@@ -40,11 +40,6 @@ const PHILOSOPHERS = [
   "Marcus Aurelius",
   "Epictetus",
   "Seneca",
-  "Cleanthes",
-  "Chrysippus",
-  "Musonius Rufus",
-  "Hierocles",
-  "Cato",
 ];
 
 function getDayOfYear() {
@@ -172,7 +167,7 @@ export default function Home() {
           top: "2.5rem",
           letterSpacing: "1.2em",
           fontSize: "0.6rem",
-          color: "rgba(220,210,195,0.55)",
+          color: "rgba(180,160,120,0.2)",
           fontFamily: "'Cormorant', serif",
           fontWeight: 300,
         }}
@@ -195,7 +190,7 @@ export default function Home() {
               fontSize: "0.65rem",
               letterSpacing: "0.5em",
               textTransform: "uppercase",
-              color: "rgba(220,210,195,0.7)",
+              color: "rgba(200,192,176,0.6)",
               fontFamily: "'Cormorant', serif",
               fontWeight: 400,
               marginBottom: "1rem",
@@ -215,13 +210,13 @@ export default function Home() {
               letterSpacing: "0.04em",
             }}
           >
-            Stoic Reflections
+            Daily Stoic Reflections
           </h1>
 
           <div
             style={{
               fontSize: "0.75rem",
-              color: "rgba(220,210,195,0.6)",
+              color: "rgba(200,192,176,0.55)",
               marginTop: "0.75rem",
               letterSpacing: "0.15em",
               fontFamily: "'Cormorant', serif",
@@ -240,7 +235,7 @@ export default function Home() {
                 fontSize: "0.7rem",
                 letterSpacing: "0.3em",
                 textTransform: "uppercase",
-                color: "rgba(220,210,195,0.55)",
+                color: "rgba(200,192,176,0.5)",
                 marginBottom: "2rem",
                 fontFamily: "'Cormorant', serif",
               }}
@@ -250,7 +245,7 @@ export default function Home() {
             <div
               style={{
                 fontSize: "clamp(1.1rem, 2.5vw, 1.35rem)",
-                color: "rgba(235,230,220,0.65)",
+                color: "rgba(235,230,220,0.8)",
                 fontStyle: "italic",
                 lineHeight: 1.7,
                 marginBottom: "3rem",
@@ -263,7 +258,7 @@ export default function Home() {
               style={{
                 fontSize: "0.65rem",
                 letterSpacing: "0.25em",
-                color: "rgba(220,210,195,0.55)",
+                color: "rgba(200,192,176,0.5)",
                 marginBottom: "1.5rem",
                 fontFamily: "'Cormorant', serif",
                 textTransform: "uppercase",
@@ -281,7 +276,7 @@ export default function Home() {
               style={{
                 width: "2px",
                 height: "40px",
-                background: "rgba(220,210,195,0.55)",
+                background: "rgba(180,160,120,0.2)",
                 margin: "0 auto 1.5rem",
                 animation: "pulse 2s ease-in-out infinite",
               }}
@@ -291,7 +286,7 @@ export default function Home() {
                 fontSize: "0.7rem",
                 letterSpacing: "0.35em",
                 textTransform: "uppercase",
-                color: "rgba(220,210,195,0.55)",
+                color: "rgba(180,160,120,0.25)",
                 fontFamily: "'Cormorant', serif",
               }}
             >
@@ -417,13 +412,7 @@ export default function Home() {
                     {philosopher === "Marcus Aurelius" && "Meditations"}
                     {philosopher === "Epictetus" && "Discourses & Enchiridion"}
                     {philosopher === "Seneca" && "Letters to Lucilius & On the Shortness of Life"}
-                    {philosopher === "Cleanthes" && "Hymn to Zeus"}
-                    {philosopher === "Chrysippus" && "On the Passions & On Providence"}
-                    {philosopher === "Musonius Rufus" && "Lectures & Fragments"}
-                    {philosopher === "Hierocles" && "Elements of Ethics"}
-                    {philosopher === "Cato" && "As recorded by Plutarch & Cicero"}
                   </div>
-                 
                 </div>
               </div>
             );
@@ -444,8 +433,9 @@ export default function Home() {
           </div>
         )}
 
-        {/* Button */}
-        <div style={{ marginTop: quote ? "3.5rem" : "1rem" }}>
+        {/* Button - only show before generation */}
+        {!quote && (
+        <div style={{ marginTop: "1rem" }}>
           <button
             onClick={generateQuote}
             disabled={loading}
@@ -474,9 +464,10 @@ export default function Home() {
               e.target.style.color = "rgba(235,230,220,0.6)";
             }}
           >
-            {quote ? "Generate Another" : "Receive Today's Reflection"}
+            Receive Today&apos;s Reflection
           </button>
         </div>
+        )}
       </div>
 
       {/* Bottom */}
@@ -505,8 +496,8 @@ export default function Home() {
         }
         * { box-sizing: border-box; }
         body { margin: 0; }
-        button:focus { outline: 1px solid rgba(220,210,195,0.55); outline-offset: 3px; }
-        ::selection { background: rgba(220,210,195,0.55); }
+        button:focus { outline: 1px solid rgba(180,160,120,0.2); outline-offset: 3px; }
+        ::selection { background: rgba(180,160,120,0.2); }
       `}</style>
     </div>
   );
